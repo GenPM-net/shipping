@@ -1,6 +1,6 @@
 // Tablas de @core/shipping. Las recoge drizzle-kit vía src/lib/db/drizzle.config.ts.
 import { boolean, index, integer, jsonb, pgTable, text } from 'drizzle-orm/pg-core';
-import { primaryId, timestamps } from '../db/index.js';
+import { primaryId, timestamps } from '../db/index.ts';
 
 export const shippingZones = pgTable('shipping_zones', {
   id: primaryId('shz'),

@@ -1,5 +1,5 @@
 // @core/shipping — API pública. Al importarlo se registra el paso de envío en @core/cart.
-export { shippingAdminResources, shippingRatesAdminResource, shippingZonesAdminResource } from './admin.js';
+export { shippingAdminResources, shippingRatesAdminResource, shippingZonesAdminResource } from './admin.ts';
 export {
   CARRIERS,
   RateInput,
@@ -12,5 +12,5 @@ export {
   upsertZone,
   ZoneInput,
   zoneFor,
-} from './shipping.js';
-export { type ShippingRate, type ShippingZone, shippingRates, shippingZones } from './schema.js';
+} from './shipping.ts';
+export { type ShippingRate, type ShippingZone, shippingRates, shippingZones } from './schema.ts';

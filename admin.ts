@@ -1,9 +1,9 @@
 // Panel: zonas y tarifas de envío.
 import { asc, count, eq } from 'drizzle-orm';
-import type { AdminContext, AdminResource } from '../contracts/index.js';
-import { getDb } from '../db/index.js';
-import { RateInput, upsertRate, upsertZone, ZoneInput } from './shipping.js';
-import { type ShippingRate, type ShippingZone, shippingRates, shippingZones } from './schema.js';
+import type { AdminContext, AdminResource } from '../contracts/index.ts';
+import { getDb } from '../db/index.ts';
+import { RateInput, upsertRate, upsertZone, ZoneInput } from './shipping.ts';
+import { type ShippingRate, type ShippingZone, shippingRates, shippingZones } from './schema.ts';
 
 class ShippingForbidden extends Error {
   readonly code = 'forbidden';

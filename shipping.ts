@@ -1,10 +1,10 @@
 // Tarifas por zona y paso de envío de la tubería de totales de @core/cart.
 import { and, asc, eq } from 'drizzle-orm';
 import { z } from 'zod';
-import { type CartTotals, registerTotalsStep } from '../cart/index.js';
-import { type Executor, getDb } from '../db/index.js';
-import { money, sub } from '../money/index.js';
-import { type ShippingRate, type ShippingZone, shippingRates, shippingZones } from './schema.js';
+import { type CartTotals, registerTotalsStep } from '../cart/index.ts';
+import { type Executor, getDb } from '../db/index.ts';
+import { money, sub } from '../money/index.ts';
+import { type ShippingRate, type ShippingZone, shippingRates, shippingZones } from './schema.ts';
 
 const Country = z.string().regex(/^([A-Z]{2}|\*)$/);
 export const ZoneInput = z.object({ id: z.string().optional(), name: z.string().min(1).max(80), countries: z.array(Country).min(1).max(250), position: z.number().int().default(0) });
