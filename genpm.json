@@ -1,0 +1,33 @@
+{
+  "$": 1,
+  "n": "@core/shipping",
+  "v": "1.0.0",
+  "s": {
+    "en": "Shipping zones and rates (flat, weight, order value, free over X) with delivery estimates and tracking URLs",
+    "es": "Zonas y tarifas de envío (fija, por peso, por importe, gratis desde X) con plazos estimados y URLs de seguimiento",
+    "pt-BR": "Zonas e tarifas de frete (fixa, por peso, por valor, grátis acima de X) com prazos e links de rastreio",
+    "fr": "Zones et tarifs de livraison (fixe, poids, montant, gratuit dès X) avec délais estimés et liens de suivi",
+    "de": "Versandzonen und -tarife (pauschal, Gewicht, Bestellwert, gratis ab X) mit Lieferzeiten und Tracking-Links",
+    "ja": "配送ゾーンと料金（定額・重量・金額・X 以上無料）、配達目安、追跡 URL",
+    "zh-CN": "配送区域与运费（固定、按重量、按金额、满额包邮），含预计送达时间和物流跟踪链接",
+    "ko": "배송 지역과 요금(정액·무게·금액·X 이상 무료), 예상 배송일, 배송 추적 URL"
+  },
+  "d": "src/lib/shipping",
+  "l": "MIT",
+  "k": [
+    "ecommerce",
+    "shipping",
+    "delivery",
+    "tracking",
+    "cart"
+  ],
+  "g": {
+    "@core/db": "^1.0.0",
+    "@core/cart": "^1.0.0",
+    "@core/money": "^1.0.0",
+    "@core/contracts": "^1.0.0"
+  },
+  "p": {
+    "zod": "^4.0.0"
+  }
+}
