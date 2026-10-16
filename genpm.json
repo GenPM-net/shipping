@@ -1,7 +1,7 @@
 {
   "$": 1,
   "n": "@core/shipping",
-  "v": "1.0.0",
+  "v": "1.0.1",
   "s": {
     "en": "Shipping zones and rates (flat, weight, order value, free over X) with delivery estimates and tracking URLs",
     "es": "Zonas y tarifas de envío (fija, por peso, por importe, gratis desde X) con plazos estimados y URLs de seguimiento",

@@ -23,6 +23,24 @@ ranges, free shipping over an amount (after discounts) and delivery estimates in
 step (order 200) of the @core/cart totals pipeline and builds tracking URLs for common carriers.
 No label purchase or live carrier quotes. Tables: `shipping_zones`, `shipping_rates`.
 
+## Setup
+
+After `genpm add`, follow these steps (your AI agent finds the same steps in `src/lib/shipping/AGENTS.md` and can do them for you):
+
+1. Migrations as in `src/lib/db/AGENTS.md`. Import this module at startup (it registers the totals step).
+2. Create zones and rates in the admin (`...shippingAdminResources()` in `src/genpm/admin.ts`, permissions `shipping:read|update`).
+3. At checkout, store the country and the chosen rate on the cart: `setCartMeta(cart.id, { country: 'ES', shippingRateId })`;
+   list options with `ratesFor(totals, country)` and show `minDays–maxDays` before payment.
+4. Tracking: `trackingUrl(carrier, number)` when marking an order shipped (@core/orders).
+5. Verify: a cart with country `ES` gets the cheapest Spanish rate; one over the free threshold pays 0.
+
+## What's inside
+
+Paths are relative to `src/lib/shipping`.
+
+- `index.ts` — public API: `upsertZone`, `upsertRate`, `ratesFor`, `zoneFor`, `trackingUrl`, `CARRIERS`, `shippingAdminResources`.
+- `shipping.ts` — rules and the totals step. `admin.ts` — admin resources. `schema.ts` — tables.
+
 ## At a glance
 
 - **GenPM dependencies** (installed with it): [@core/db](https://genpm.net/p/@core/db), [@core/cart](https://genpm.net/p/@core/cart), [@core/money](https://genpm.net/p/@core/money), [@core/contracts](https://genpm.net/p/@core/contracts)
